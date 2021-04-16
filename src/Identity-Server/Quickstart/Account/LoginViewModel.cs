@@ -10,6 +10,7 @@ namespace SFA.DAS.Provider.Idams.Stub.Quickstart.Account
 {
     public class LoginViewModel : LoginInputModel
     {
+        public string ClientId { get; set; }
         public bool AllowRememberLogin { get; set; } = true;
         public bool EnableLocalLogin { get; set; } = true;
 

@@ -258,6 +258,7 @@ namespace SFA.DAS.Provider.Idams.Stub.Quickstart.Account
 
             return new LoginViewModel
             {
+                ClientId = context?.ClientId,
                 AllowRememberLogin = AccountOptions.AllowRememberLogin,
                 EnableLocalLogin = allowLocal && AccountOptions.AllowLocalLogin,
                 ReturnUrl = returnUrl,

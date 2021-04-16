@@ -4,7 +4,7 @@ namespace SFA.DAS.Provider.Idams.Stub.Custom
 {
     public class ExtendedUser: TestUser
     {
-        public string ProviderId = "";
-        public string Description = "";
+        public string ClientId;
+        public string Description;
     }
 }

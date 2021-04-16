@@ -1,12 +1,25 @@
-﻿.user:hover {
+﻿h1 {
+    font-family: monospace
+}
+
+.user:hover {
     background-color: #eee;
     cursor: pointer;
 }
 
 .user {
     padding: 1em;
+    font-family: monospace
 }
 
 .user {
     border-bottom: solid 1px #eee;
+}
+
+.user .username {
+    font-size: 1.2em;
+}
+
+.client-id {
+    font-style: italic;
 }

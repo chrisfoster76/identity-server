@@ -21,10 +21,9 @@ namespace SFA.DAS.Provider.Idams.Stub
             {
                 new ExtendedUser
                 {
+                    ClientId = ClientIds.Employer,
                     SubjectId = "5BE86359-073C-434B-AD2D-A3932222DABE",
                     Username = "employer-user",
-                    ProviderId = trainUGood.Ukprn,
-                    ProviderName = trainUGood.Name,
                     Description = "Test Employer user",
                     Claims = new List<Claim>
                     {
@@ -37,10 +36,9 @@ namespace SFA.DAS.Provider.Idams.Stub
                 },
                 new ExtendedUser
                 {
+                    ClientId = ClientIds.Idams,
                     SubjectId = "5BE86359-073C-434B-AD2D-A3932222DABE",
                     Username = "chris",
-                    ProviderId = trainUGood.Ukprn,
-                    ProviderName = trainUGood.Name,
                     Description = "User with DAA role",
                     Claims = new List<Claim>
                     {
@@ -58,11 +56,10 @@ namespace SFA.DAS.Provider.Idams.Stub
                 },
                 new ExtendedUser
                 {
+                    ClientId = ClientIds.Idams,
                     SubjectId = "fcea33d2-0bec-4fdd-8c97-5902973746a4",
                     Username = "duff",
                     //Password = "password",
-                    ProviderId = trainUGood.Ukprn,
-                    ProviderName = trainUGood.Name,
                     Description = "User without DAA role",
                     Claims = new List<Claim>
                     {
@@ -78,11 +75,10 @@ namespace SFA.DAS.Provider.Idams.Stub
                 },
                 new ExtendedUser
                 {
+                    ClientId = ClientIds.Idams,
                     SubjectId = "148cd9cb-9189-435d-a5ab-550bb800122d",
                     Username = "user1",
                     //Password = "password",
-                    ProviderId = likeAPro.Ukprn,
-                    ProviderName = likeAPro.Name,
                     Description = "User with DAA role",
                     Claims = new List<Claim>
                     {
@@ -100,10 +96,9 @@ namespace SFA.DAS.Provider.Idams.Stub
 
             var elliot = new ExtendedUser
             {
+                ClientId = ClientIds.Idams,
                 SubjectId = "636c95d8-d55d-47a8-9f6d-4c8ce364ca28",
                 Username = "elliot",
-                ProviderId = trainUGood.Ukprn,
-                ProviderName = trainUGood.Name,
                 Description = "User with a large number of claims, useful for causing cookie-chunking",
                 Claims = new List<Claim>
                 {
@@ -125,10 +120,9 @@ namespace SFA.DAS.Provider.Idams.Stub
             //roatp
             result.Add(new ExtendedUser
             {
+                ClientId = ClientIds.Roatp,
                 SubjectId = "dd732fd7-ab57-7900-85c6-9e6a80c9b24b", //this is "nameidentifier", aka "sub" I believe
                 Username = "roatpuser",
-                ProviderId = trainUGood.Ukprn,
-                ProviderName = trainUGood.Name,
                 Description = "Roatp Apply User",
                 Claims = new List<Claim>
                 {
