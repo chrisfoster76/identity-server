@@ -28,7 +28,7 @@ namespace SFA.DAS.Provider.Idams.Stub
                     Claims = new List<Claim>
                     {
                         new Claim(Employer.ClaimTypes.DisplayName, "Christopher Foster"),
-                        new Claim(Employer.ClaimTypes.Id, "employer-user-id-1"),
+                        new Claim(Employer.ClaimTypes.Id, "37e9761e-1dc9-42b7-9054-787794ad6442"),
                         new Claim(Employer.ClaimTypes.GivenName, "Christopher"),
                         new Claim(Employer.ClaimTypes.FamilyName, "Foster"),
                         new Claim(Employer.ClaimTypes.Email, "chris@email.com")
@@ -133,7 +133,25 @@ namespace SFA.DAS.Provider.Idams.Stub
                     new Claim(Custom.ClaimTypes.Name, "Chris @ Train-U-Good Corporation"),
                     new Claim(Custom.ClaimTypes.DisplayName, "Chris @ Train-U-Good Corporation"),
                     new Claim(Custom.ClaimTypes.Upn, "dd732fd7-ab57-7900-85c6-9e6a80c9b24b"),
-                    new Claim(Custom.ClaimTypes.Email, "chrisfoster186@googlemail.com")
+                    new Claim(Custom.ClaimTypes.Email, "chrisfoster186@googlemail.com"),
+                }
+            });
+            result.Add(new ExtendedUser
+            {
+                ClientId = ClientIds.Roatp,
+                SubjectId = "B53B9317-3551-4B86-B435-FD14F2E6930E", //this is "nameidentifier", aka "sub" I believe
+                Username = "roatpuser2",
+                Description = "Another Roatp Apply User",
+                Claims = new List<Claim>
+                {
+                    //new Claim(JwtClaimTypes.Subject, "dd732fd7-ab57-7900-85c6-9e6a80c9b24b"), //not sure what this is then?
+                    new Claim(JwtClaimTypes.Email, "chrisfoster186+test2@googlemail.com"),
+                    new Claim(JwtClaimTypes.Role, "admin"),
+                    new Claim(Custom.ClaimTypes.Ukprn, trainUGood.Ukprn),
+                    new Claim(Custom.ClaimTypes.Name, "Chris @ Train-U-Good Corporation"),
+                    new Claim(Custom.ClaimTypes.DisplayName, "Chris @ Train-U-Good Corporation"),
+                    new Claim(Custom.ClaimTypes.Upn, "B53B9317-3551-4B86-B435-FD14F2E6930E"),
+                    new Claim(Custom.ClaimTypes.Email, "chrisfoster186+test2@googlemail.com"),
                 }
             });
 
