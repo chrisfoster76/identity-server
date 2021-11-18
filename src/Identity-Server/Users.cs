@@ -24,14 +24,47 @@ namespace SFA.DAS.Provider.Idams.Stub
                     ClientId = ClientIds.Employer,
                     SubjectId = "5BE86359-073C-434B-AD2D-A3932222DABE",
                     Username = "employer-user",
-                    Description = "Test Employer user",
+                    Description = "Mega Corp User",
                     Claims = new List<Claim>
                     {
-                        new Claim(Employer.ClaimTypes.DisplayName, "Christopher Foster"),
+                        new Claim(Employer.ClaimTypes.DisplayName, "Mega Corp User"),
                         new Claim(Employer.ClaimTypes.Id, "37e9761e-1dc9-42b7-9054-787794ad6442"),
                         new Claim(Employer.ClaimTypes.GivenName, "Christopher"),
                         new Claim(Employer.ClaimTypes.FamilyName, "Foster"),
-                        new Claim(Employer.ClaimTypes.Email, "chris@email.com")
+                        new Claim(Employer.ClaimTypes.Email, "chris@email.com"),
+                        new Claim(Employer.ClaimTypes.EmailAddress, "chris@email.com")
+                    }
+                },
+                new ExtendedUser
+                {
+                    ClientId = ClientIds.Employer,
+                    SubjectId = "77826be4-bd8f-4495-8f5c-ee950d18751c",
+                    Username = "employer-user-viewer",
+                    Description = "Mega Corp Viewer",
+                    Claims = new List<Claim>
+                    {
+                        new Claim(Employer.ClaimTypes.DisplayName, "Mega Corp Viewer"),
+                        new Claim(Employer.ClaimTypes.Id, "77826be4-bd8f-4495-8f5c-ee950d18751c"),
+                        new Claim(Employer.ClaimTypes.GivenName, "John"),
+                        new Claim(Employer.ClaimTypes.FamilyName, "Smith"),
+                        new Claim(Employer.ClaimTypes.Email, "chris@email.com"),
+                        new Claim(Employer.ClaimTypes.EmailAddress, "chris@email.com")
+                    }
+                },
+                new ExtendedUser
+                {
+                    ClientId = ClientIds.Employer,
+                    SubjectId = "b82f7646-4d31-4541-b640-0f0dbc189e44",
+                    Username = "employer-nonlevy-user",
+                    Description = "Rapid Logistics User",
+                    Claims = new List<Claim>
+                    {
+                        new Claim(Employer.ClaimTypes.DisplayName, "Rapid Logistics User"),
+                        new Claim(Employer.ClaimTypes.Id, "b82f7646-4d31-4541-b640-0f0dbc189e44"),
+                        new Claim(Employer.ClaimTypes.GivenName, "Christopher"),
+                        new Claim(Employer.ClaimTypes.FamilyName, "Foster"),
+                        new Claim(Employer.ClaimTypes.Email, "chris@email.com"),
+                        new Claim(Employer.ClaimTypes.EmailAddress, "chris@email.com")
                     }
                 },
                 new ExtendedUser

@@ -15,6 +15,7 @@ namespace SFA.DAS.Provider.Idams.Stub.Custom.Resources
                 Employer.ClaimTypes.GivenName,
                 Employer.ClaimTypes.FamilyName,
                 Employer.ClaimTypes.Email,
+                Employer.ClaimTypes.EmailAddress,
                 Employer.ClaimTypes.DisplayName,
             };
         }
@@ -25,6 +26,7 @@ namespace SFA.DAS.Provider.Idams.Stub.Custom.Resources
             public const string GivenName = "http://das/employer/identity/claims/given_name";
             public const string FamilyName = "http://das/employer/identity/claims/family_name";
             public const string Email = "http://das/employer/identity/claims/email";
+            public const string EmailAddress = "http://das/employer/identity/claims/email_address";
             public const string DisplayName = "http://das/employer/identity/claims/display_name";
         }
     }

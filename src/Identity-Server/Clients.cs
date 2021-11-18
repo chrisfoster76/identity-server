@@ -54,7 +54,7 @@ namespace SFA.DAS.Provider.Idams.Stub
                         IdentityServerConstants.StandardScopes.Profile,
                         Custom.Scopes.Employer
                     },
-                    RedirectUris = new List<string> {"https://localhost:5001/signin-oidc"},
+                    RedirectUris = new List<string> {"https://localhost:5001/signin-oidc", "https://localhost:44376/signin-oidc", "https://localhost:44331/signin-oidc"},
                     PostLogoutRedirectUris = new List<string> { "https://localhost:5001" }
                 },
             };
