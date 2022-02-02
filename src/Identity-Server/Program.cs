@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Serilog;
 
 namespace SFA.DAS.Provider.Idams.Stub
 {
@@ -7,6 +8,11 @@ namespace SFA.DAS.Provider.Idams.Stub
     {
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .CreateLogger();
+
             CreateWebHostBuilder(args).Build().Run();
         }
 
