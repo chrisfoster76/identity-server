@@ -69,6 +69,22 @@ namespace SFA.DAS.Provider.Idams.Stub
                 },
                 new ExtendedUser
                 {
+                    ClientId = ClientIds.Employer,
+                    SubjectId = "22ba2d68-db01-4f90-bfe7-01bd59f39b42",
+                    Username = "positivity-user",
+                    Description = "Positivity User",
+                    Claims = new List<Claim>
+                    {
+                        new Claim(Employer.ClaimTypes.DisplayName, "Positivity User"),
+                        new Claim(Employer.ClaimTypes.Id, "22ba2d68-db01-4f90-bfe7-01bd59f39b42"),
+                        new Claim(Employer.ClaimTypes.GivenName, "Christopher"),
+                        new Claim(Employer.ClaimTypes.FamilyName, "Foster"),
+                        new Claim(Employer.ClaimTypes.Email, "chris@email.com"),
+                        new Claim(Employer.ClaimTypes.EmailAddress, "chris@email.com")
+                    }
+                },
+                new ExtendedUser
+                {
                     ClientId = ClientIds.Idams,
                     SubjectId = "5BE86359-073C-434B-AD2D-A3932222DABE",
                     Username = "chris",
