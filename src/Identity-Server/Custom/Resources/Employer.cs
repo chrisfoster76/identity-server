@@ -17,6 +17,8 @@ namespace SFA.DAS.Provider.Idams.Stub.Custom.Resources
                 Employer.ClaimTypes.Email,
                 Employer.ClaimTypes.EmailAddress,
                 Employer.ClaimTypes.DisplayName,
+                Employer.ClaimTypes.AccountOwner,
+                Employer.ClaimTypes.AssociatedAccounts
             };
         }
 
@@ -28,6 +30,8 @@ namespace SFA.DAS.Provider.Idams.Stub.Custom.Resources
             public const string Email = "http://das/employer/identity/claims/email";
             public const string EmailAddress = "http://das/employer/identity/claims/email_address";
             public const string DisplayName = "http://das/employer/identity/claims/display_name";
+            public const string AccountOwner = "http://das/employer/identity/claims/account_owner";
+            public const string AssociatedAccounts = "http://das/employer/identity/claims/associatedAccounts";
         }
     }
 }

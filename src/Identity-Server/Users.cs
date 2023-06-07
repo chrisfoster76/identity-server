@@ -4,6 +4,7 @@ using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
 using IdentityServer4.Test;
+using Newtonsoft.Json;
 using SFA.DAS.Provider.Idams.Stub.Custom;
 using SFA.DAS.Provider.Idams.Stub.Custom.Resources;
 using ClaimTypes = System.Security.Claims.ClaimTypes;
@@ -16,6 +17,21 @@ namespace SFA.DAS.Provider.Idams.Stub
         {
             var trainUGood = TrainingProviders.Get("10005077");
             var likeAPro = TrainingProviders.Get("10000896");
+
+            var associatedAccounts1 = new Dictionary<string, EmployerUserAccountItem>();
+            associatedAccounts1.Add("VN48RP", new EmployerUserAccountItem
+            {
+                AccountId = "VN48RP",
+                EmployerName = "Mega Corp",
+                Role = "Owner"
+            });
+            associatedAccounts1.Add("VNR6P9", new EmployerUserAccountItem
+            {
+                AccountId = "VNR6P9",
+                EmployerName = "Rapid Logistics Co Ltd",
+                Role = "Owner"
+            });
+
 
             var result = new List<ExtendedUser>
             {
@@ -32,7 +48,9 @@ namespace SFA.DAS.Provider.Idams.Stub
                         new Claim(Employer.ClaimTypes.GivenName, "Christopher"),
                         new Claim(Employer.ClaimTypes.FamilyName, "Foster"),
                         new Claim(Employer.ClaimTypes.Email, "chris@email.com"),
-                        new Claim(Employer.ClaimTypes.EmailAddress, "chris@email.com")
+                        new Claim(Employer.ClaimTypes.EmailAddress, "chris@email.com"),
+                        new Claim(Employer.ClaimTypes.AccountOwner, "8194"),
+                        new Claim(Employer.ClaimTypes.AssociatedAccounts, JsonConvert.SerializeObject(associatedAccounts1))
                     }
                 },
                 new ExtendedUser
@@ -205,6 +223,13 @@ namespace SFA.DAS.Provider.Idams.Stub
             });
 
             return result;
+        }
+
+        public class EmployerUserAccountItem
+        {
+            public string AccountId { get; set; }
+            public string EmployerName { get; set; }
+            public string Role { get; set; }
         }
     }
 }
